@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken");
 const authenticate = require("../middleware/authenticate");
 require("../db/conn");
 const User = require("../model/userSchema");
-const request = require('request');
 
 
 
@@ -45,16 +44,6 @@ const request = require('request');
 //Done with Async Await:
 router.post("/api/signup", async (req, res) => {
   console.log(req.body);
-    request(
-    { url: 'https://joke-api-strict-cors.appspot.com/jokes/random' },
-    (error, response, body) => {
-      if (error || response.statusCode !== 200) {
-        return res.status(500).json({ type: 'error', message: err.message });
-      }
-
-      res.json(JSON.parse(body));
-    }
-  )
 
   const { name, email, phone, work, password, cpassword } = req.body;
   //res.send("Hello from register");
