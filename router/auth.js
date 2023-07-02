@@ -7,10 +7,7 @@ require("../db/conn");
 const User = require("../model/userSchema");
 const request = require('request');
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
+
 
 // router.get("/", (req, res) => {
   // res.send("Hello world from router");
