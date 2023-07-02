@@ -6,7 +6,8 @@
     "routes": [
         {
             "route": "/api/*",
-            "rewrite": "https://mern-deployement.onrender.com/api/*"
+            "redirect": "https://mern-deployement.onrender.com/api/*",
+            "statusCode": 301
         }
     ]
 }
