@@ -3,10 +3,6 @@ const express = require("express");
 dotenv.config({ path: "./config.env" });
 const cookieParser = require('cookie-parser');
 const app = express();
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
 app.use(cookieParser());
 require("./db/conn");
 app.use(express.json());
