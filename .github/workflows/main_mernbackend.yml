@@ -23,9 +23,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          npm run build 
-          npm run dev
-          npm run render-postbuild
+          npm run azure
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
