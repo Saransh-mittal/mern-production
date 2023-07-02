@@ -10,7 +10,7 @@
     "server": "node app.js",
     "client": "npm start --prefix client",
     "clientinstall": "npm install --prefix client",
-    "dev": "npm run server && npm run client",
+    "dev": "node app.js",
     "render-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build -- prefix client",
     "azure": "npm run build && npm install --prefix client && npm run build --prefix client && npm run start"
   },
